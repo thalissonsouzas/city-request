@@ -1,20 +1,27 @@
-# city-request
-CityRequest é um aplicativo destinado a permitir que os cidadãos registrem e reportem ocorrências urbanas à administração da cidade. O aplicativo visa proporcionar uma visão dinâmica e atualizada das condições e preocupações urbanas, facilitando a gestão e o monitoramento das demandas da cidade.
+# 🏙️ CityRequest
+## 📋 About
+CityRequest is an application developed to allow citizens to register and report urban occurrences to city administration. The project aims to provide a dynamic and up-to-date view of urban conditions and concerns, facilitating the management and monitoring of the city's needs.
 
-Descrição
-CityRequest permite aos usuários registrar diversos tipos de ocorrências, como:
+### 🚀 Features
+Occurrence Reporting: Allows users to report issues and make requests directly through the app.
+Interactive Map: Uses Mapbox to display locations of reported occurrences with markers.
+Dynamic Visualization: Provides an updated view of urban events, aiding in the management and response by city administration.
 
-Buracos nas vias públicas
-Necessidade de poda de árvores
-Vazamentos de água
-Outras situações que requerem atenção da administração pública
-O objetivo é fornecer uma plataforma eficiente onde os cidadãos possam fazer solicitações diretamente para a prefeitura, ajudando a manter a cidade bem cuidada e funcionando de maneira eficiente.
+### 🛠️ Technologies Used
+React: Library for building user interfaces.
+Vite: Tool for fast and optimized development.
+Mapbox: Mapping service for displaying and interacting with occurrences.
 
-Funcionalidades
+
+## 📋 Sobre
+CityRequest é um aplicativo desenvolvido para permitir que os cidadãos registrem e reportem ocorrências urbanas à administração da cidade. O projeto visa proporcionar uma visão dinâmica e atualizada das condições e preocupações urbanas, facilitando a gestão e o monitoramento das demandas da cidade.
+
+### 🚀 Funcionalidades
 Registro de Ocorrências: Permite que os usuários reportem problemas e façam solicitações diretamente pelo aplicativo.
 Mapa Interativo: Utiliza Mapbox para mostrar localizações de ocorrências registradas com marcadores.
 Visualização Dinâmica: Fornece uma visão atualizada dos eventos urbanos, facilitando o gerenciamento e a resposta da administração.
-Tecnologias Utilizadas
+
+### 🛠️ Tecnologias Utilizadas
 React: Biblioteca para construção da interface do usuário.
 Vite: Ferramenta para desenvolvimento rápido e otimizado.
 Mapbox: Serviço de mapas para exibição e interação com as ocorrências.

@@ -34,7 +34,7 @@ const App = () => {
             onChange={(e) => setComment(e.target.value)}
             placeholder="Digite um comentário sobre este local"
           />
-          <button onClick={handleSubmit}>Salvar Chamado</button>
+          <button onClick={handleSubmit} style={{background: 'blue'}}>Salvar Chamado</button>
         </div>
       )}
       <div className="calls-list">

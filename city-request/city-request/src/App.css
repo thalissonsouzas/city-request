@@ -1,41 +1,59 @@
 /* src/App.css */
+
+/* Estilo padrão para desktop e telas maiores */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.map-container {
+  position: relative;
+  width: 600px;
+  height: 800px;
+}
+
+/* Estilo para o formulário sobreposto ao mapa */
 .form-container {
-  margin: 20px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  background: #f9f9f9;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  max-width: 300px;
+  z-index: 1;
+  overflow: auto; /* Permite rolagem se necessário */
 }
 
-textarea {
+/* Aumenta o tamanho do input de texto */
+.form-container textarea {
   width: 100%;
-  height: 100px;
-  margin: 10px 0;
+  height: 150px; /* Altura aumentada */
+  resize: vertical; /* Permite redimensionamento vertical */
 }
 
-button {
-  padding: 10px 20px;
-  background: black;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
+/* Estilo para dispositivos móveis */
+@media (max-width: 768px) {
+  .map-container {
+    width: 100vw;
+    height: 200vw; /* Altura é o dobro da largura */
+  }
 
-button:hover {
-  background: #gray;
-}
-
-.calls-list {
-  margin: 20px;
-}
-
-.calls-list ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.calls-list li {
-  margin: 10px 0;
-  padding: 10px;
-  border: 1px solid #ccc;
-  background: #f9f9f9;
+  .form-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    overflow-y: auto; /* Permite rolagem se necessário */
+  }
 }

@@ -1,10 +1,10 @@
 // src/App.js
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Map from './components/Map';
+import { addLocalidade } from './assets/localidade';
 import './App.css';
 
 const App = () => {
-  const [calls, setCalls] = useState([]);
   const [selectedLocation, setSelectedLocation] = useState(null);
   const [comment, setComment] = useState('');
 
@@ -14,16 +14,17 @@ const App = () => {
 
   const handleSubmit = () => {
     if (selectedLocation && comment) {
-      setCalls([...calls, { ...selectedLocation, comment }]);
+      addLocalidade(selectedLocation.lat, selectedLocation.lng, comment);
       setSelectedLocation(null);
       setComment('');
     }
   };
 
   return (
-    <div>
+    <div className="app-container">
       <h1>Mapa de Buracos</h1>
-      <Map calls={calls} onAddCalled={handleAddCalled} />
+      <h2>Busque o endereço e clique no local aproximado</h2>
+      <Map onAddCalled={handleAddCalled} />
       {selectedLocation && (
         <div className="form-container">
           <h2>Novo Chamado</h2>
@@ -33,19 +34,12 @@ const App = () => {
             value={comment}
             onChange={(e) => setComment(e.target.value)}
             placeholder="Digite um comentário sobre este local"
+            style={{ width: '100%', height: '80px' }}
           />
-          <button onClick={handleSubmit} style={{background: 'blue'}}>Salvar Chamado</button>
+          <button onClick={handleSubmit} style={{ background: 'blue' }}>Salvar Chamado</button>
         </div>
       )}
       <div className="calls-list">
-        <h2>Chamados Abertos</h2>
-        <ul>
-          {calls.map((call, index) => (
-            <li key={index}>
-              {call.lng}, {call.lat} - {call.address} - {call.comment}
-            </li>
-          ))}
-        </ul>
       </div>
     </div>
   );
